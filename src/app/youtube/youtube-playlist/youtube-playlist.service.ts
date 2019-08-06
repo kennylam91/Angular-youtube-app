@@ -1,4 +1,5 @@
 import {Injectable} from '@angular/core';
+import {Ivideo} from '../youtube-player/Video';
 
 @Injectable({
   providedIn: 'root'
@@ -6,8 +7,8 @@ import {Injectable} from '@angular/core';
 export class YoutubePlaylistService {
   // tslint:disable-next-line:variable-name
   private _playList = [
-    {name: ' ILLIONAIRE Dok2 & The Quiett - YGGR', id: 'https://www.youtube.com/watch?v=D86MB1EyvvQ&list=RDMMD86MB1EyvvQ&start_radio=1'},
-    {name: 'L4L (Lookin For Luv)', id: 'https://www.youtube.com/watch?v=DYOLXqhmYUU'}];
+    {name: ' ILLIONAIRE Dok2 & The Quiett - YGGR', id: 'https://www.youtube.com/embed/D86MB1EyvvQ?list=RDD86MB1EyvvQ'},
+    {name: 'L4L (Lookin For Luv)', id: 'https://www.youtube.com/embed/DYOLXqhmYUU'}];
 
 
   get playList(): { id: string; name: string }[] {
@@ -16,6 +17,10 @@ export class YoutubePlaylistService {
 
   set playList(value: { id: string; name: string }[]) {
     this._playList = value;
+  }
+
+  findById(id: string) {
+    return this.playList.find(item => item.id === id);
   }
 
   constructor() {

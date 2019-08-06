@@ -1,14 +1,11 @@
-import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
-
-import { YoutubeRoutingModule } from './youtube-routing.module';
-
+import {NgModule} from '@angular/core';
+import {CommonModule} from '@angular/common';
 
 @NgModule({
   declarations: [],
   imports: [
     CommonModule,
-    YoutubeRoutingModule
   ]
 })
-export class YoutubeModule { }
+export class YoutubeModule {
+}

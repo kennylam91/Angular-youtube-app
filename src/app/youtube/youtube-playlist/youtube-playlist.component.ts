@@ -1,11 +1,8 @@
 import {Component, OnInit} from '@angular/core';
 import {YoutubePlayerComponent} from '../youtube-player/youtube-player.component';
 import {YoutubePlaylistService} from './youtube-playlist.service';
+import {Ivideo} from '../youtube-player/Video';
 
-interface Ivideo {
-  name: string;
-  id: string;
-}
 @Component({
   selector: 'app-youtube-playlist',
   templateUrl: './youtube-playlist.component.html',
