@@ -4,7 +4,7 @@ import {YoutubePlaylistService} from './youtube-playlist.service';
 
 interface Ivideo {
   name: string;
-  src: string;
+  id: string;
 }
 @Component({
   selector: 'app-youtube-playlist',

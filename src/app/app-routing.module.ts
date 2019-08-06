@@ -6,10 +6,11 @@ import {YoutubePlayerComponent} from './youtube-player/youtube-player.component'
 
 const routes: Routes = [
   {path: 'youtube', component: YoutubePlaylistComponent},
-  {path: '**', component: PageNotFoundComponent},];
+  {path: '', redirectTo: '/youtube', pathMatch : 'full'},
+  {path: '**', component: PageNotFoundComponent}];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes, {preloadingStrategy: PreloadAllModules})],
+  imports: [RouterModule.forRoot(routes, {enableTracing: true})],
   exports: [RouterModule]
 })
 export class AppRoutingModule {
