@@ -1,5 +1,5 @@
 <h3>Youtube playlist</h3>
 <div *ngFor="let video of playList">
-  <a routerLink="{{video.id}}">{{video.name}}</a>
+  <a [routerLink]="['/youtube', video.id]">{{video.name}}</a>
 </div>
 <router-outlet></router-outlet>

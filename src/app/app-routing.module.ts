@@ -5,9 +5,14 @@ import {PageNotFoundComponent} from './page-not-found/page-not-found.component';
 import {YoutubePlayerComponent} from './youtube/youtube-player/youtube-player.component';
 
 const routes: Routes = [
-  {path: 'youtube', component: YoutubePlaylistComponent},
-  {path: '', redirectTo: '/youtube', pathMatch : 'full'},
-  {path: '**', component: PageNotFoundComponent}];
+  {
+    path: 'youtube', component: YoutubePlaylistComponent, children: [
+    {path: ':id', component: YoutubePlayerComponent}
+    ]
+  },
+  {path: '', redirectTo: '/youtube', pathMatch: 'full'},
+  {path: '**', component: PageNotFoundComponent}
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes, {enableTracing: true})],
