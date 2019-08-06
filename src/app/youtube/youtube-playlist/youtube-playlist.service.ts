@@ -6,8 +6,8 @@ import {Injectable} from '@angular/core';
 export class YoutubePlaylistService {
   // tslint:disable-next-line:variable-name
   private _playList = [
-    {name: '1', id: 'a'},
-    {name: '2', id: 'b'}];
+    {name: ' ILLIONAIRE Dok2 & The Quiett - YGGR', id: 'https://www.youtube.com/watch?v=D86MB1EyvvQ&list=RDMMD86MB1EyvvQ&start_radio=1'},
+    {name: 'L4L (Lookin For Luv)', id: 'https://www.youtube.com/watch?v=DYOLXqhmYUU'}];
 
 
   get playList(): { id: string; name: string }[] {
